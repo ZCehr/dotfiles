@@ -1,1 +1,9 @@
-/home/chris/.vim/coc-settings.json
+{
+    "eslint.filetypes": ["javascript", "typescript", "javascriptreact"],
+    "eslint.lintTask.options": "--resolve-plugins-relative-to .",
+    "eslint.options": {
+        "resolvePluginsRelativeTo": "."
+    },
+    "tsserver.log": "verbose",
+    "tsserver.trace.server": "verbose"
+}
