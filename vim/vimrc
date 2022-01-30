@@ -15,11 +15,12 @@ Plug 'antoinemadec/coc-fzf'
 Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
 " Coc extensions
-let g:coc_global_extensions = [ 'coc-tsserver', 'coc-html', 'coc-css', 'coc-eslint' ]
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-html', 'coc-css', 'coc-eslint', 'coc-pyright', 'coc-vetur', 'coc-texlab', 'coc-vimtex' ]
 
 " Theming / Styling ...
 " Colorscheme for vim
@@ -190,3 +191,23 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" Python root patterns
+autocmd FileType python let b:coc_root_patterns = ['__init__.py', '.git', '.venv', 'main.py']
+
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_compiler_latexmk = {
+    \ 'options' : [
+    \   '-pdf',
+    \   '-shell-escape',
+    \   '-verbose',
+    \   '-file-line-error',
+    \   '-synctex=1',
+    \   '-interaction=nonstopmode',
+    \   '-output-directory=build_output',
+    \   '-aux-directory=build_output',
+    \ ],
+    \}
+
+" Fix indent for vue
+autocmd Filetype vue setlocal ts=2 sw=2 expandtab
