@@ -197,6 +197,7 @@ autocmd FileType python let b:coc_root_patterns = ['__init__.py', '.git', '.venv
 
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_compiler_latexmk = {
+    \ 'build_dir': 'build_output',
     \ 'options' : [
     \   '-pdf',
     \   '-shell-escape',
@@ -208,6 +209,8 @@ let g:vimtex_compiler_latexmk = {
     \   '-aux-directory=build_output',
     \ ],
     \}
+" set spell for latex
+autocmd Filetype latex setlocal spell
 
 " Fix indent for vue
 autocmd Filetype vue setlocal ts=2 sw=2 expandtab
