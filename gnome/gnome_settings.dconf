@@ -1,5 +1,5 @@
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1620122108
+release-check-time=uint32 1654163605
 
 [com/ubuntu/sound]
 allow-amplified-volume=false
@@ -22,17 +22,27 @@ hinting='slight'
 numlock-state='off'
 
 [org/gnome/shell]
-app-picker-view=uint32 1
-enabled-extensions=['dash-to-panel@jderose9.github.com', 'pixel-saver@deadalnix.me']
-favorite-apps=@as []
-enable-hot-corners=false
+enabled-extensions=['dash-to-panel@jderose9.github.com', 'pixel-saver@deadalnix.me', 'OverviewAllWindows@amiller27', 'multi-monitors-add-on@spin83']
+command-history=['nm-connection-editor']
+remember-mount-password=false
 had-bluetooth-devices-setup=true
+app-picker-view=uint32 1
+enable-hot-corners=false
+favorite-apps=@as []
+
+[org/gnome/shell/overrides]
+workspaces-only-on-primary=false
+
+[org/gnome/shell/extensions/overview-all-windows]
+replace-overview=false
 
 [org/gnome/shell/extensions/dash-to-dock]
 multi-monitor=false
 dock-fixed=false
+isolate-monitors=true
 dock-position='BOTTOM'
 dash-max-icon-size=26
+isolate-workspaces=true
 
 [org/gnome/shell/extensions/dash-to-panel]
 group-apps-label-max-width=60
@@ -57,7 +67,7 @@ primary-monitor=-1
 show-appmenu=false
 taskbar-locked=false
 trans-bg-color='#babdb6'
-isolate-workspaces=false
+isolate-workspaces=true
 leftbox-size=0
 show-showdesktop-button=false
 group-apps-label-font-color='#d3d7cf'
@@ -102,6 +112,11 @@ taskbar-position='CENTEREDMONITOR'
 trans-use-custom-bg=false
 group-apps-label-font-size=12
 
+[org/gnome/shell/extensions/multi-monitors-add-on]
+show-thumbnails-slider=true
+available-indicators=@as []
+show-panel=false
+
 [org/gnome/baobab/ui]
 window-state=87168
 window-size=(960, 600)
@@ -110,7 +125,7 @@ window-size=(960, 600)
 show-tabs-mode='auto'
 
 [org/gnome/gedit/plugins/filebrowser]
-virtual-root='file:///home/chris/Downloads'
+virtual-root='file:///home/chris/Data/04_Other/Backups/dotfiles/gnome'
 tree-view=true
 root='file:///'
 
@@ -118,7 +133,7 @@ root='file:///'
 active-plugins=['modelines', 'time', 'docinfo', 'spell', 'filebrowser']
 
 [org/gnome/gedit/state/window]
-size=(1280, 1393)
+size=(1280, 1033)
 state=87168
 bottom-panel-size=140
 side-panel-size=200
@@ -129,20 +144,20 @@ include-pointer=false
 include-border=true
 border-effect='none'
 delay=0
-last-save-directory='file:///home/chris/Downloads'
+last-save-directory='file:///home/chris/Data/02_Study/Master/Masterarbeit/Thesis/Thesis/images'
 
 [org/gnome/nautilus/preferences]
 search-view='list-view'
 default-folder-viewer='icon-view'
-search-filter-time-type='last_modified'
+search-filter-time-type='last_used'
 
 [org/gnome/nautilus/window-state]
-sidebar-width=204
-geometry='1280x1033+3236+360'
+sidebar-width=177
+geometry='1203x567+3038+472'
 maximized=false
 
 [org/gnome/nautilus/compression]
-default-compression-format='zip'
+default-compression-format='7z'
 
 [org/gnome/nautilus/desktop]
 home-icon-visible=false
@@ -177,9 +192,12 @@ gtk-theme='Adwaita-dark'
 icon-theme='Humanity'
 
 [org/gnome/desktop/notifications]
-application-children=['update-manager', 'org-gnome-software', 'apport-gtk', 'gnome-network-panel', 'org-gnome-dejadup', 'org-gnome-nautilus', 'nm-connection-editor', 'keepass2', 'gnome-system-monitor-gnome-system-monitor', 'riot-web', 'code', 'org-gnome-terminal', 'org-gnome-tweaks', 'org-gnome-chromegnomeshell', 'slack-slack', 'eog', 'jetbrains-idea-ce', 'google-chrome', 'discord-discord', 'spotify-spotify', 'gnome-control-center', 'leagueoflegends-leagueoflegends', 'skype-skypeforlinux', 'libreoffice-impress', 'org-gnome-shell-portalhelper', 'vmware-player', 'libreoffice-writer', 'libreoffice-calc', 'org-gnome-gedit', 'droidcam', 'nomachine-status-xfce']
+application-children=['update-manager', 'org-gnome-software', 'apport-gtk', 'gnome-network-panel', 'org-gnome-dejadup', 'org-gnome-nautilus', 'nm-connection-editor', 'keepass2', 'gnome-system-monitor-gnome-system-monitor', 'riot-web', 'code', 'org-gnome-terminal', 'org-gnome-tweaks', 'org-gnome-chromegnomeshell', 'slack-slack', 'eog', 'jetbrains-idea-ce', 'google-chrome', 'discord-discord', 'spotify-spotify', 'gnome-control-center', 'leagueoflegends-leagueoflegends', 'skype-skypeforlinux', 'libreoffice-impress', 'org-gnome-shell-portalhelper', 'vmware-player', 'libreoffice-writer', 'libreoffice-calc', 'org-gnome-gedit', 'droidcam', 'nomachine-status-xfce', 'discord', 'org-gnome-screenshot', 'firefox', 'slack', 'com-cisco-anyconnect-gui', 'org-eduvpn-client']
 show-banners=false
 show-in-lock-screen=false
+
+[org/gnome/desktop/notifications/application/firefox]
+application-id='firefox.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-control-center]
 application-id='gnome-control-center.desktop'
@@ -198,6 +216,15 @@ application-id='gnome-network-panel.desktop'
 
 [org/gnome/desktop/notifications/application/slack-slack]
 application-id='slack_slack.desktop'
+
+[org/gnome/desktop/notifications/application/slack]
+application-id='slack.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-screenshot]
+application-id='org.gnome.Screenshot.desktop'
+
+[org/gnome/desktop/notifications/application/org-eduvpn-client]
+application-id='org.eduvpn.client.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-dejadup]
 application-id='org.gnome.DejaDup.desktop'
@@ -244,17 +271,20 @@ application-id='org.gnome.Terminal.desktop'
 [org/gnome/desktop/notifications/application/update-manager]
 application-id='update-manager.desktop'
 
-[org/gnome/desktop/notifications/application/keepass2]
-application-id='keepass2.desktop'
-
 [org/gnome/desktop/notifications/application/org-gnome-chromegnomeshell]
 application-id='org.gnome.ChromeGnomeShell.desktop'
+
+[org/gnome/desktop/notifications/application/keepass2]
+application-id='keepass2.desktop'
 
 [org/gnome/desktop/notifications/application/libreoffice-impress]
 application-id='libreoffice_impress.desktop'
 
 [org/gnome/desktop/notifications/application/leagueoflegends-leagueoflegends]
 application-id='leagueoflegends_leagueoflegends.desktop'
+
+[org/gnome/desktop/notifications/application/discord]
+application-id='discord.desktop'
 
 [org/gnome/desktop/notifications/application/skype-skypeforlinux]
 application-id='skype_skypeforlinux.desktop'
@@ -268,11 +298,14 @@ application-id='org.gnome.Nautilus.desktop'
 [org/gnome/desktop/notifications/application/google-chrome]
 application-id='google-chrome.desktop'
 
-[org/gnome/desktop/notifications/application/org-gnome-software]
-application-id='org.gnome.Software.desktop'
+[org/gnome/desktop/notifications/application/com-cisco-anyconnect-gui]
+application-id='com.cisco.anyconnect.gui.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-gedit]
 application-id='org.gnome.gedit.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'Sundry', 'YaST']
@@ -313,7 +346,7 @@ sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gn
 [org/gnome/desktop/wm/preferences]
 button-layout=':appmenu,minimize,maximize,close'
 resize-with-right-button=false
-num-workspaces=1
+num-workspaces=2
 
 [org/gnome/desktop/wm/keybindings]
 switch-applications=['<Alt>Escape']
@@ -343,7 +376,7 @@ sources=[('xkb', 'de')]
 xkb-options=@as []
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='search'
 
 [org/gnome/eog/view]
 background-color='rgb(0,0,0)'
@@ -407,11 +440,27 @@ background-transparency-percent=2
 highlight-foreground-color='rgb(255,255,255)'
 audible-bell=false
 
+[org/gnome/nm-applet/eap/bbf536a1-4333-4ef0-a235-90e1093460ec]
+ignore-phase2-ca-cert=false
+ignore-ca-cert=false
+
 [org/gnome/nm-applet/eap/6a202a5e-fbf8-4e79-9b17-c68821fdd4bc]
 ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 
-[org/gnome/nm-applet/eap/2f735097-2ebf-494b-8eb3-bc3d66658219]
+[org/gnome/nm-applet/eap/e926df08-847a-4881-861e-6670093efbdb]
+ignore-phase2-ca-cert=false
+ignore-ca-cert=false
+
+[org/gnome/nm-applet/eap/7f4ed0ee-165d-4a87-afba-feafe41d1f00]
+ignore-phase2-ca-cert=false
+ignore-ca-cert=false
+
+[org/gnome/nm-applet/eap/6bb1a2e3-3ecc-485c-8c00-87c0d6543c1a]
+ignore-phase2-ca-cert=false
+ignore-ca-cert=false
+
+[org/gnome/nm-applet/eap/b7b58630-cb78-425b-9e40-7668ed538c27]
 ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 
@@ -419,7 +468,7 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 
-[org/gnome/nm-applet/eap/bbf536a1-4333-4ef0-a235-90e1093460ec]
+[org/gnome/nm-applet/eap/2f735097-2ebf-494b-8eb3-bc3d66658219]
 ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 
@@ -446,18 +495,20 @@ col-6-visible=true
 col-6-width=0
 
 [org/gnome/software]
-check-timestamp=int64 1620114667
+check-timestamp=int64 1654849088
 
 [org/gtk/settings/file-chooser]
-sort-column='name'
+sort-column='modified'
 sidebar-width=271
 window-position=(3178, 371)
 show-size-column=true
 show-hidden=false
+type-format='category'
 window-size=(1325, 651)
 sort-directories-first=true
+show-type-column=true
 date-format='with-time'
-sort-order='ascending'
+sort-order='descending'
 location-mode='path-bar'
 
 [org/gtk/settings/color-chooser]
@@ -503,9 +554,9 @@ last-crop-menu-choice=1
 show-details=true
 first-run=false
 check-new-release-ignore='focal'
-window-height=413
-launch-time=int64 1619683266
-launch-count=54
+window-height=498
+launch-time=int64 1654761481
+launch-count=107
 window-width=645
 
 [ca/desrt/dconf-editor]

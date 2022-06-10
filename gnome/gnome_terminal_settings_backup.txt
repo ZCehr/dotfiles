@@ -1,0 +1,57 @@
+[legacy]
+mnemonics-enabled=true
+schema-version=uint32 3
+theme-variant='dark'
+default-show-menubar=false
+
+[legacy/profiles:/:f7953195-8e9a-46c9-a5d9-d2eb54c73397]
+foreground-color='rgb(255,255,255)'
+visible-name='ChrisGnomeTerminal'
+scrollbar-policy='never'
+palette=['rgb(0,0,0)', 'rgb(205,0,0)', 'rgb(0,205,0)', 'rgb(205,205,0)', 'rgb(69,133,136)', 'rgb(251,73,52)', 'rgb(0,205,205)', 'rgb(229,229,229)', 'rgb(127,127,127)', 'rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(255,255,0)', 'rgb(92,92,255)', 'rgb(255,0,255)', 'rgb(0,255,255)', 'rgb(255,255,255)']
+bold-is-bright=false
+use-system-font=false
+use-transparent-background=false
+highlight-colors-set=false
+use-theme-colors=false
+font='MesloLGS NF 10'
+use-theme-transparency=false
+bold-color-same-as-fg=true
+background-color='rgb(40,40,40)'
+background-transparency-percent=0
+highlight-foreground-color='rgb(255,255,255)'
+audible-bell=false
+
+[legacy/profiles:]
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', 'f7953195-8e9a-46c9-a5d9-d2eb54c73397', '2eb953c5-d7e7-417f-bfb3-d345627f70d0']
+default='f7953195-8e9a-46c9-a5d9-d2eb54c73397'
+
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+foreground-color='rgb(46,52,54)'
+palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+cursor-shape='block'
+use-system-font=true
+use-theme-colors=false
+use-transparent-background=false
+use-theme-transparency=false
+background-color='rgb(238,238,236)'
+scrollbar-policy='never'
+audible-bell=false
+
+[legacy/profiles:/:2eb953c5-d7e7-417f-bfb3-d345627f70d0]
+foreground-color='rgb(255,255,255)'
+visible-name='ChrisGnomeTerminal (Copy)'
+scrollbar-policy='never'
+palette=['rgb(0,0,0)', 'rgb(205,0,0)', 'rgb(0,205,0)', 'rgb(205,205,0)', 'rgb(69,133,136)', 'rgb(251,73,52)', 'rgb(0,205,205)', 'rgb(229,229,229)', 'rgb(127,127,127)', 'rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(255,255,0)', 'rgb(92,92,255)', 'rgb(255,0,255)', 'rgb(0,255,255)', 'rgb(255,255,255)']
+bold-is-bright=false
+use-system-font=false
+use-transparent-background=true
+highlight-colors-set=false
+use-theme-colors=false
+font='MesloLGS NF 10'
+use-theme-transparency=false
+bold-color-same-as-fg=true
+background-color='rgb(10,27,31)'
+background-transparency-percent=2
+highlight-foreground-color='rgb(255,255,255)'
+audible-bell=false
