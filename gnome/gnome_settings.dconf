@@ -1,5 +1,5 @@
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1654163605
+release-check-time=uint32 1685948939
 
 [com/ubuntu/sound]
 allow-amplified-volume=false
@@ -23,7 +23,7 @@ numlock-state='off'
 
 [org/gnome/shell]
 enabled-extensions=['dash-to-panel@jderose9.github.com', 'pixel-saver@deadalnix.me', 'OverviewAllWindows@amiller27', 'multi-monitors-add-on@spin83']
-command-history=['nm-connection-editor']
+command-history=['nm-connection-editor', 'r']
 remember-mount-password=false
 had-bluetooth-devices-setup=true
 app-picker-view=uint32 1
@@ -134,7 +134,7 @@ active-plugins=['modelines', 'time', 'docinfo', 'spell', 'filebrowser']
 
 [org/gnome/gedit/state/window]
 size=(1280, 1033)
-state=87168
+state=43908
 bottom-panel-size=140
 side-panel-size=200
 side-panel-active-page='GeditWindowDocumentsPanel'
@@ -143,7 +143,7 @@ side-panel-active-page='GeditWindowDocumentsPanel'
 include-pointer=false
 include-border=true
 border-effect='none'
-delay=0
+delay=2
 last-save-directory='file:///home/chris/Data/02_Study/Master/Masterarbeit/Thesis/Thesis/images'
 
 [org/gnome/nautilus/preferences]
@@ -153,8 +153,9 @@ search-filter-time-type='last_used'
 
 [org/gnome/nautilus/window-state]
 sidebar-width=177
-geometry='1203x567+3038+472'
-maximized=false
+start-with-sidebar=true
+geometry='960x1033+3517+93'
+maximized=true
 
 [org/gnome/nautilus/compression]
 default-compression-format='7z'
@@ -164,6 +165,9 @@ home-icon-visible=false
 network-icon-visible=false
 volumes-visible=false
 trash-icon-visible=false
+
+[org/gnome/nautilus/list-view]
+default-zoom-level='small'
 
 [org/gnome/evolution-data-server]
 network-monitor-gio-name=''
@@ -183,16 +187,17 @@ type='google'
 migrated=true
 
 [org/gnome/desktop/interface]
-clock-show-date=false
-show-battery-percentage=true
 gtk-im-module='gtk-im-context-simple'
-clock-show-seconds=false
+show-battery-percentage=true
+toolkit-accessibility=false
 cursor-theme='whiteglass'
-gtk-theme='Adwaita-dark'
+clock-show-seconds=false
 icon-theme='Humanity'
+gtk-theme='Adwaita-dark'
+clock-show-date=false
 
 [org/gnome/desktop/notifications]
-application-children=['update-manager', 'org-gnome-software', 'apport-gtk', 'gnome-network-panel', 'org-gnome-dejadup', 'org-gnome-nautilus', 'nm-connection-editor', 'keepass2', 'gnome-system-monitor-gnome-system-monitor', 'riot-web', 'code', 'org-gnome-terminal', 'org-gnome-tweaks', 'org-gnome-chromegnomeshell', 'slack-slack', 'eog', 'jetbrains-idea-ce', 'google-chrome', 'discord-discord', 'spotify-spotify', 'gnome-control-center', 'leagueoflegends-leagueoflegends', 'skype-skypeforlinux', 'libreoffice-impress', 'org-gnome-shell-portalhelper', 'vmware-player', 'libreoffice-writer', 'libreoffice-calc', 'org-gnome-gedit', 'droidcam', 'nomachine-status-xfce', 'discord', 'org-gnome-screenshot', 'firefox', 'slack', 'com-cisco-anyconnect-gui', 'org-eduvpn-client']
+application-children=['update-manager', 'org-gnome-software', 'apport-gtk', 'gnome-network-panel', 'org-gnome-dejadup', 'org-gnome-nautilus', 'nm-connection-editor', 'keepass2', 'gnome-system-monitor-gnome-system-monitor', 'riot-web', 'code', 'org-gnome-terminal', 'org-gnome-tweaks', 'org-gnome-chromegnomeshell', 'slack-slack', 'eog', 'jetbrains-idea-ce', 'google-chrome', 'discord-discord', 'spotify-spotify', 'gnome-control-center', 'leagueoflegends-leagueoflegends', 'skype-skypeforlinux', 'libreoffice-impress', 'org-gnome-shell-portalhelper', 'vmware-player', 'libreoffice-writer', 'libreoffice-calc', 'org-gnome-gedit', 'droidcam', 'nomachine-status-xfce', 'discord', 'org-gnome-screenshot', 'firefox', 'slack', 'com-cisco-anyconnect-gui', 'org-eduvpn-client', 'zoom']
 show-banners=false
 show-in-lock-screen=false
 
@@ -280,6 +285,9 @@ application-id='keepass2.desktop'
 [org/gnome/desktop/notifications/application/libreoffice-impress]
 application-id='libreoffice_impress.desktop'
 
+[org/gnome/desktop/notifications/application/zoom]
+application-id='Zoom.desktop'
+
 [org/gnome/desktop/notifications/application/leagueoflegends-leagueoflegends]
 application-id='leagueoflegends_leagueoflegends.desktop'
 
@@ -355,6 +363,9 @@ cycle-windows=['<Alt>Tab']
 [org/gnome/desktop/session]
 idle-delay=uint32 0
 
+[org/gnome/desktop/a11y/applications]
+screen-reader-enabled=false
+
 [org/gnome/desktop/a11y/mouse]
 click-type-window-style='both'
 click-type-window-geometry=''
@@ -376,7 +387,7 @@ sources=[('xkb', 'de')]
 xkb-options=@as []
 
 [org/gnome/control-center]
-last-panel='search'
+last-panel='sound'
 
 [org/gnome/eog/view]
 background-color='rgb(0,0,0)'
@@ -392,12 +403,14 @@ default-show-menubar=false
 foreground-color='rgb(255,255,255)'
 visible-name='ChrisGnomeTerminal'
 scrollbar-policy='never'
+login-shell=true
 palette=['rgb(0,0,0)', 'rgb(205,0,0)', 'rgb(0,205,0)', 'rgb(205,205,0)', 'rgb(69,133,136)', 'rgb(251,73,52)', 'rgb(0,205,205)', 'rgb(229,229,229)', 'rgb(127,127,127)', 'rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(255,255,0)', 'rgb(92,92,255)', 'rgb(255,0,255)', 'rgb(0,255,255)', 'rgb(255,255,255)']
 bold-is-bright=false
 use-system-font=false
-use-transparent-background=false
+use-custom-command=false
 highlight-colors-set=false
 use-theme-colors=false
+use-transparent-background=false
 font='MesloLGS NF 10'
 use-theme-transparency=false
 bold-color-same-as-fg=true
@@ -444,11 +457,15 @@ audible-bell=false
 ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 
+[org/gnome/nm-applet/eap/c788fbd1-ca8d-4295-8a0e-343d4cfbdf7f]
+ignore-phase2-ca-cert=false
+ignore-ca-cert=false
+
 [org/gnome/nm-applet/eap/6a202a5e-fbf8-4e79-9b17-c68821fdd4bc]
 ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 
-[org/gnome/nm-applet/eap/e926df08-847a-4881-861e-6670093efbdb]
+[org/gnome/nm-applet/eap/34f93c7d-18d6-45b7-93c2-baf294e17cfc]
 ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 
@@ -456,7 +473,15 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 
+[org/gnome/nm-applet/eap/e926df08-847a-4881-861e-6670093efbdb]
+ignore-phase2-ca-cert=false
+ignore-ca-cert=false
+
 [org/gnome/nm-applet/eap/6bb1a2e3-3ecc-485c-8c00-87c0d6543c1a]
+ignore-phase2-ca-cert=false
+ignore-ca-cert=false
+
+[org/gnome/nm-applet/eap/8255aeb2-aae6-4ab3-af39-309fa11d4ff9]
 ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 
@@ -495,12 +520,12 @@ col-6-visible=true
 col-6-width=0
 
 [org/gnome/software]
-check-timestamp=int64 1654849088
+check-timestamp=int64 1686220496
 
 [org/gtk/settings/file-chooser]
-sort-column='modified'
+sort-column='name'
 sidebar-width=271
-window-position=(3178, 371)
+window-position=(2858, 191)
 show-size-column=true
 show-hidden=false
 type-format='category'
@@ -548,15 +573,15 @@ library-maximize=false
 [org/yorba/shotwell/crop-settings]
 last-crop-height=1
 last-crop-width=1
-last-crop-menu-choice=1
+last-crop-menu-choice=0
 
 [apps/update-manager]
 show-details=true
 first-run=false
 check-new-release-ignore='focal'
 window-height=498
-launch-time=int64 1654761481
-launch-count=107
+launch-time=int64 1686126717
+launch-count=149
 window-width=645
 
 [ca/desrt/dconf-editor]

@@ -5,5 +5,14 @@
         "resolvePluginsRelativeTo": "."
     },
     "tsserver.log": "verbose",
-    "tsserver.trace.server": "verbose"
+    "tsserver.trace.server": "verbose",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "130"
+    ],
+    "pyright.organizeimports.provider": "isort",
+    "pyright.useLibraryCodeForTypes": true,
+    "python.formatting.provider": "black",
+    "python.analysis.useLibraryCodeForTypes": true,
+    "inlayHint.enable": false,
 }
